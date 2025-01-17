@@ -5,7 +5,7 @@ const Hero = () => {
       className="overflow-hidden z-10 bg-transparent rounded-3xl mb-8 h-[770px]"
     >
       <div className="min-h-screen relative flex md:flex-row flex-col-reverse md:items-end justify-center items-center bg-white">
-        <div className="absolute h-full md:w-4/12 top-0 -right-1 bg-[url('./darkblue.png')] bg-[length:100%_100%] bottom-0 z-10 w-full">
+        <div className="absolute h-full md:w-4/12 top-0 -right-1 bg-[url('/darkblue.png')] bg-[length:100%_100%] bottom-0 z-10 w-full">
           {" "}
           <h1 className="rotate-90 absolute top-[38%] right-[-45%] text-[#EAF2FA]">
             HITESH <span className="text-[#EAF2FA]">LALWANI</span>
@@ -27,9 +27,11 @@ const Hero = () => {
 
             <br />
             <div className="flex justify-end ">
-              <button className="px-6 py-3 rounded-lg shadow-md bg-gray-200 text-dark_primary font-semibold hover:shadow-inner transition duration-300">
-                Connect with me
-              </button>{" "}
+              <a href="#contact">
+                <button className="px-6 py-3 rounded-lg shadow-md bg-gray-200 text-dark_primary font-semibold hover:shadow-inner transition duration-300">
+                  Connect with me
+                </button>{" "}
+              </a>
             </div>
             <div className="flex flex-col gap-10 mt-10"></div>
           </div>
