@@ -40,7 +40,7 @@ const SkillsSection = () => {
             where the front-end and back-end <br /> work in perfect harmony.
           </h3>
         </div>
-        <div className="h-1/5 bg-white rounded-3xl flex items-center justify-between p-5">
+        <div className="h-1/5 bg-white rounded-3xl flex items-center justify-between p-5 mt-2">
           <h2>Project</h2>
           <IoIosArrowDropdownCircle size={60} className="text-dark_primary" />
         </div>

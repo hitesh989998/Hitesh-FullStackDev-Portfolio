@@ -4,181 +4,383 @@ import { SiFirebase } from "react-icons/si";
 import { SiCoronarenderer } from "react-icons/si";
 
 const technologies = [
+  "React.js",
+  "Node.js",
   "MongoDB",
   "Express.js",
-  "React",
-  "Node.js",
-  "Stripe Payment Gateway",
+  "Stripe",
   "React Recharts",
-  "Redux Toolkit",
+  "Redux",
   "REST APIs",
   "React Helmet",
   "JWT Authentication",
   "Bcrypt",
   "Multer",
+  "Toastify",
   "Tailwind CSS",
 ];
 
 const Projects = () => {
   return (
-    <main className="flex flex-col bg-dark_primary w-full h-[770px] rounded-3xl mb-8 p-4">
-      <section className="flex flex-col w-full" style={{ height: "30%" }}>
-        <div className="flex justify-between items-center">
-          <h1 className="tracking-wide text-white">Nesture</h1>
+    <>
+      <main className="flex flex-col bg-dark_primary w-full h-[770px] rounded-3xl mb-8">
+        <section className="flex flex-col w-full p-4" style={{ height: "30%" }}>
+          <div className="flex justify-between items-center">
+            <h1 className="tracking-wide text-white">Nesture</h1>
 
-          <div
-            className="flex flex-col items-center justify-center text-white cursor-pointer"
-            onClick={() => window.open("https://nesture.web.app", "_blank")}
-          >
-            <div className="group hover:text-blue-900 flex flex-col items-center justify-center">
-              <FaGithubSquare className="text-6xl group-hover:text-blue-900" />
-              <p className="text-sm group-hover:text-blue-900 text-white">
-                Github
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex space-x-4 my-4">
-          <div className="group" title="Hosted On Firebase">
-            <button
-              className="flex items-center text-sm underline text-white group-hover:text-blue-900"
+            <div
+              className="flex flex-col items-center justify-center text-white cursor-pointer"
               onClick={() => window.open("https://nesture.web.app", "_blank")}
             >
-              View Website
-              <SiFirebase className="ml-2 text-white group-hover:text-blue-900" />
-            </button>
+              <div className="group hover:text-blue-900 flex flex-col items-center justify-center">
+                <FaGithubSquare className="text-6xl group-hover:text-blue-900" />
+                <p className="text-sm group-hover:text-blue-900 text-white">
+                  Github
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="group" title="Hosted On Render">
-            <button
-              className="flex items-center text-sm group-hover:text-blue-900 underline text-white hover:text-blue-900"
-              onClick={() =>
-                window.open("https://nesture.onrender.com", "_blank")
-              }
-            >
-              Backend Server
-              <SiCoronarenderer className="ml-2 text-white group-hover:text-blue-900" />
-            </button>
+
+          <div className="flex space-x-4 my-4">
+            <div className="group" title="Hosted On Firebase">
+              <button
+                className="flex items-center text-sm underline text-white group-hover:text-blue-900"
+                onClick={() => window.open("https://nesture.web.app", "_blank")}
+              >
+                View Website
+                <SiFirebase className="ml-2 text-white group-hover:text-blue-900" />
+              </button>
+            </div>
+            <div className="group" title="Hosted On Render">
+              <button
+                className="flex items-center text-sm group-hover:text-blue-900 underline text-white hover:text-blue-900"
+                onClick={() =>
+                  window.open("https://nesture.onrender.com", "_blank")
+                }
+              >
+                Backend Server
+                <SiCoronarenderer className="ml-2 text-white group-hover:text-blue-900" />
+              </button>
+            </div>
+          </div>
+
+          <p className="text-xs text-white tracking-wide">
+            Nesture is a full-featured e-commerce platform built with the MERN
+            stack for speed, scalability, and security. Featuring user and admin
+            dashboards, it utilizes Redux Toolkit for state management and REST
+            APIs for smooth data flow. Key integrations include Stripe for
+            secure payments, JWT for authentication, and Bcrypt for data
+            protection. Advanced tools like React Recharts enhance data
+            visualization, while Multer ensures efficient file handling. <br />{" "}
+            <br /> Developed by Hitesh Lalwani, Nesture combines technologies
+            like React.js, Node.js, MongoDB, and Express.js to deliver a fast,
+            secure, and reliable e-commerce experience where every component
+            works like clockwork.
+          </p>
+
+          <hr className="w-full my-4 mb-2" />
+
+          <div className="flex flex-wrap gap-2">
+            {technologies.map((tech, index) => (
+              <p
+                key={index}
+                className="text-xs px-4 py-3 mx-0.5 shadow-dark rounded-lg  text-white"
+              >
+                {tech}
+              </p>
+            ))}
+          </div>
+        </section>
+
+        <section className="grid grid-cols-3 grid-rows-[1fr,1fr] gap-2 mt-14 h-full w-full  ">
+          <div className="col-span-1 row-span-1 group">
+            <div className="relative rounded-r-3xl overflow-hidden h-full">
+              <img
+                src="./starry.png"
+                alt="Project 1"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-end justify-start p-4">
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-left">
+                  <h3 className="text-xl text-blue-300">
+                    Beautiful UI, blending Glassmorphism & Minimalism
+                  </h3>
+                  <p className="text-xs">
+                    Nesture combines the elegance of glassmorphism with the
+                    simplicity of minimalism to create a visually stunning
+                    interface. The platform's glassy elements and
+                    distraction-free layout keep users engaged while driving
+                    higher conversion rates.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-span-1 row-span-1 group">
+            <div className="relative rounded-3xl overflow-hidden h-full">
+              <img
+                src="./starry.png"
+                alt="Project 2"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-end justify-center p-4">
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
+                  <h3 className="text-xl">
+                    Powerful Admin Dashboard with CRUD Operations
+                  </h3>
+                  <p className="text-sm">
+                    The admin dashboard offers seamless CRUD operations, powered
+                    by real-time data from the backend using Recharts.
+                    Administrators can easily Add/Manage products and users,
+                    using Axios for API requests and Multer for file handling,
+                    all backed by a secure Express-MongoDB server. A dedicated
+                    namespace architecture ensures secure and efficient admin
+                    functionality.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-span-1 row-span-1 group">
+            <div className="relative rounded-l-3xl overflow-hidden h-full">
+              <img
+                src="./starry.png"
+                alt="Project 3"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-end justify-center p-4">
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
+                  <h3 className="text-xl">
+                    User-Friendly Customer Dashboard with Real-Time Insights
+                  </h3>
+                  <p className="text-sm">
+                    The customer-facing dashboard offers a sleek, modern design,
+                    enhanced with Recharts to display user data in an intuitive
+                    way. Users can easily navigate through clean visuals while
+                    gaining valuable insights with ease.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-span-1 row-span-1 group h-[160px] overflow-hidden">
+            <div className="relative rounded-r-3xl rounded-b-none overflow-hidden h-full">
+              <img
+                src="./starry.png"
+                alt="Project 4"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-end justify-center p-4">
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
+                  <h3 className="text-xl">
+                    Advanced Payment Integration with Stripe
+                  </h3>
+                  <p className="text-sm">
+                    Nesture integrates Stripe, the world’s leading payment
+                    platform, to provide a seamless and secure payment
+                    experience. By utilizing Stripe’s robust API, transactions
+                    are processed quickly and efficiently, ensuring that
+                    customers can enjoy a smooth checkout. With built-in fraud
+                    protection, secure encryption, and multiple payment methods,
+                    Stripe ensures that sensitive payment data is safeguarded.
+                    Whether it's credit card payments or digital wallets,
+                    Nesture's integration with Stripe guarantees hassle-free and
+                    reliable transactions, giving users peace of mind while
+                    shopping.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-span-1 row-span-1 group h-[160px]">
+            <div className="relative rounded-3xl rounded-b-none overflow-hidden h-full">
+              <img
+                src="./starry.png"
+                alt="Project 5"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-end justify-center p-4">
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
+                  <h3 className="text-xl">
+                    Secure User Authentication with JWT and Bcrypt
+                  </h3>
+                  <p className="text-sm">
+                    The platform makes use of a multi-step form for smooth user
+                    authentication, securely attaching JWT from the backend.
+                    Passwords are hashed using Bcrypt and protected with SHA-256
+                    (Secure Hash Algorithm 256-bit) encryption, ensuring
+                    sensitive data is stored safely and user privacy is
+                    maintained.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-span-1 row-span-1 group h-[160px]">
+            <div className="relative rounded-l-3xl rounded-b-none overflow-hidden h-full">
+              <img
+                src="./starry.png"
+                alt="Project 6"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-end justify-center p-4">
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
+                  <h3 className="text-xl">
+                    Scalable State Management with Redux Toolkit
+                  </h3>
+                  <p className="text-sm">
+                    Nesture uses Redux Toolkit for unified state management
+                    across the entire e-commerce platform, handling cart,
+                    product, and user states seamlessly in a single, centralized
+                    store. This approach guarantees smooth handling of increased
+                    data and user traffic as the platform grows.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <section className="flex flex-col bg-dark_primary mt-10 w-full h-[770px] rounded-3xl mb-8 p-4">
+        <div className="grid grid-cols-[1.5fr_1.5fr_1fr_1fr] grid-rows-[1.5fr_1.5fr_1fr_1fr] h-full w-full gap-2">
+          <div className="col-span-2 row-span-3 group h-full">
+            <div className="relative rounded-3xl overflow-hidden h-full">
+              <img
+                src="./starry.png"
+                alt="Project 4"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-end justify-center p-4">
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
+                  <h3 className="text-xl">
+                    Streamlined Design with Tailwind CSS
+                  </h3>
+                  <p className="text-sm">
+                    Nesture uses Tailwind CSS to create stunning layouts from
+                    scratch with speed and precision. Its utility-first
+                    framework allows for rapid styling, ensuring a polished,
+                    modern look across the platform.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-span-2 row-span-4 group h-full">
+            <div className="relative rounded-3xl overflow-hidden h-full">
+              <img
+                src="./starry.png"
+                alt="Project 4"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-end justify-center p-4">
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
+                  <h3 className="text-xl">
+                    Streamlined Design with Tailwind CSS
+                  </h3>
+                  <p className="text-sm">
+                    Nesture uses Tailwind CSS to create stunning layouts from
+                    scratch with speed and precision. Its utility-first
+                    framework allows for rapid styling, ensuring a polished,
+                    modern look across the platform.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-span-1 row-span-1 group h-full">
+            <div className="relative rounded-3xl overflow-hidden h-full">
+              <img
+                src="./starry.png"
+                alt="Project 4"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-end justify-center p-4">
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
+                  <h3 className="text-xl">
+                    Streamlined Design with Tailwind CSS
+                  </h3>
+                  <p className="text-sm">
+                    Nesture uses Tailwind CSS to create stunning layouts from
+                    scratch with speed and precision. Its utility-first
+                    framework allows for rapid styling, ensuring a polished,
+                    modern look across the platform.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-span-1 row-span-1 group h-full">
+            <div className="relative rounded-3xl overflow-hidden h-full">
+              <img
+                src="./starry.png"
+                alt="Project 4"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-end justify-center p-4">
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
+                  <h3 className="text-xl">
+                    Streamlined Design with Tailwind CSS
+                  </h3>
+                  <p className="text-sm">
+                    Nesture uses Tailwind CSS to create stunning layouts from
+                    scratch with speed and precision. Its utility-first
+                    framework allows for rapid styling, ensuring a polished,
+                    modern look across the platform.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <p className="text-base text-white mb-4">
-          This is a sample paragraph describing the project. It can include
-          features, technologies used, and any other details about the project.
+        {/* <p>Streamlined Design with Tailwind CSS</p>
+        <p>
+          Nesture uses Tailwind CSS to create stunning layouts from scratch with
+          speed and precision. Its utility-first framework allows for rapid
+          styling, ensuring a polished, modern look across the platform.
         </p>
 
-        <hr className="w-full my-4 " />
-
-        <div className="flex flex-wrap gap-2">
-          {technologies.map((tech, index) => (
-            <p
-              key={index}
-              className="text-xs px-4 py-3 mx-0.5 shadow-dark rounded-lg  text-white"
-            >
-              {tech}
-            </p>
-          ))}
-        </div>
+        <p>Responsive design that looks best everywhere.</p>
+        <p>
+          Nesture ensures a flawless user experience across all devices,
+          adapting seamlessly to different screen sizes. With a fully responsive
+          design, the platform maintains its consistency and aesthetics,
+          providing a smooth and engaging experience, whether on mobile, tablet,
+          or desktop.
+        </p>
+        <p>
+          Problem: Standing Out in a Competitive Market
+          <br />
+          In a crowded job market, many developers showcase generic e-commerce
+          projects on their resumes, often focusing on basic CRUD
+          functionalities or simple templates. These projects lack the
+          complexity and advanced features that demonstrate real-world
+          expertise, making it hard to stand out to potential employers or
+          clients. This results in a generic portfolio that doesn't highlight
+          the full range of a developer's skills.
+          <br />
+          Solution: Creating a Unique, Feature-Rich E-Commerce Platform
+          <br />
+          To set myself apart in this competitive market, I developed Nesture, a
+          full-featured e-commerce platform built with the MERN stack. By
+          incorporating advanced functionalities such as JWT authentication,
+          Stripe payment integration, Redux state management, and a fully
+          responsive design, I created a project that not only showcases my
+          technical skills but also demonstrates my ability to tackle real-world
+          challenges. This project highlights my expertise in building scalable,
+          secure, and high-performance applications, ensuring I stand out as a
+          developer ready for complex, production-level projects.
+        </p> */}
       </section>
-
-      <section className="grid grid-cols-12 grid-rows-2 gap-4 mt-9 h-screen">
-        <div className="col-span-4 row-span-2 group">
-          <div className="relative rounded-3xl overflow-hidden h-full">
-            <img
-              src="./starry.png"
-              alt="Project 1"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-end justify-center p-4">
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
-                <h3 className="text-xl">Dummy Title 1</h3>
-                <p className="text-sm">Dummy Description</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="col-span-3 row-span-2 group">
-          <div className="relative rounded-3xl overflow-hidden h-full">
-            <img
-              src="./starry.png"
-              alt="Project 2"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-end justify-center p-4">
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
-                <h3 className="text-xl">Dummy Title 1</h3>
-                <p className="text-sm">Dummy Description</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="col-span-3 group">
-          <div className="relative rounded-3xl overflow-hidden h-full">
-            <img
-              src="./starry.png"
-              alt="Project 3"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-end justify-center p-4">
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
-                <h3 className="text-xl">Dummy Title 1</h3>
-                <p className="text-sm">Dummy Description</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="col-span-2 group">
-          <div className="relative rounded-3xl overflow-hidden h-full">
-            <img
-              src="./starry.png"
-              alt="Project 4"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-end justify-center p-4">
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
-                <h3 className="text-xl">Dummy Title 1</h3>
-                <p className="text-sm">Dummy Description</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="col-span-2 group">
-          <div className="relative rounded-3xl overflow-hidden h-full">
-            <img
-              src="./starry.png"
-              alt="Project 5"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-end justify-center p-4">
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
-                <h3 className="text-xl">Dummy Title 1</h3>
-                <p className="text-sm">Dummy Description</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="col-span-3 group">
-          <div className="relative rounded-3xl overflow-hidden h-full">
-            <img
-              src="./starry.png"
-              alt="Project 6"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-end justify-center p-4">
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
-                <h3 className="text-xl">Dummy Title 1</h3>
-                <p className="text-sm">Dummy Description</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+    </>
   );
 };
 
