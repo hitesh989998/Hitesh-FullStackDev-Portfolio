@@ -1,7 +1,9 @@
 export default function Experience() {
   return (
-    <main className="flex w-full h-[770px] gap-2 mb-8 p-4 bg-blue-50 rounded-3xl">
-      {/* Section: About Me */}
+    <main
+      id="experience"
+      className="flex w-full h-[770px] gap-2 mb-8 p-4 bg-blue-50 rounded-3xl"
+    >
       <section className="flex-1 bg-cover bg-center relative rounded-3xl overflow-hidden bg-[url('./glass4.webp')]">
         <div className="absolute inset-0 bg-black bg-opacity-30 hover:bg-opacity-50"></div>
         <div className="relative z-10 p-6 rounded-3xl h-full flex flex-col justify-start">
@@ -30,7 +32,6 @@ export default function Experience() {
         <div className="relative z-10 bg-white bg-opacity-30 p-6 rounded-3xl h-full flex flex-col justify-start">
           <h2 className="text-3xl font-bold text-white mb-4">Experience</h2>
 
-          {/* Role 1 */}
           <div className="mb-4">
             <div className="flex justify-between items-center text-white">
               <h3 className="text-lg font-semibold">MERN Stack Intern</h3>
@@ -47,7 +48,6 @@ export default function Experience() {
             <hr className="border-t border-gray-400 my-2" />
           </div>
 
-          {/* Role 2 */}
           <div className="mb-4">
             <div className="flex justify-between items-center text-white">
               <h3 className="text-lg font-semibold">
@@ -64,7 +64,6 @@ export default function Experience() {
             <hr className="border-t border-gray-400 my-2" />
           </div>
 
-          {/* Role 3 */}
           <div>
             <div className="flex justify-between items-center text-white">
               <h3 className="text-xl font-semibold">

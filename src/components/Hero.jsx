@@ -1,4 +1,3 @@
-// import content
 const Hero = () => {
   return (
     <section

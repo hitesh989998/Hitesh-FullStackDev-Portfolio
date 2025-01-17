@@ -25,7 +25,10 @@ const SkillsSection = () => {
   ];
 
   return (
-    <div className="bg-blue-50 w-full flex h-[770px] rounded-3xl mb-8">
+    <div
+      id="capabilities"
+      className="bg-blue-50 w-full flex h-[770px] rounded-3xl mb-8"
+    >
       <section className="flex flex-col gap-1 w-1/2 h-full p-2 ">
         <div className="flex-1 bg-[#000336] rounded-3xl font-semibold relative">
           <div className="absolute inset-10 flex items-center justify-center">

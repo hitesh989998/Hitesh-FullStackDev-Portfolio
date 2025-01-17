@@ -1,4 +1,3 @@
-import { BsArrowUpRightCircleFill } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
 import { SiFirebase } from "react-icons/si";
 import { SiCoronarenderer } from "react-icons/si";
@@ -23,7 +22,10 @@ const technologies = [
 const Projects = () => {
   return (
     <>
-      <main className="flex flex-col bg-dark_primary w-full h-[770px] rounded-3xl mb-8">
+      <main
+        className="flex flex-col bg-dark_primary w-full h-[770px] rounded-3xl mb-8 "
+        id="projects"
+      >
         <section className="flex flex-col w-full p-4" style={{ height: "30%" }}>
           <div className="flex justify-between items-center">
             <h1 className="tracking-wide text-white">Nesture</h1>
@@ -327,23 +329,6 @@ const Projects = () => {
             </div>
           </div>
         </div>
-
-        {/* <p>Streamlined Design with Tailwind CSS</p>
-        <p>
-          Nesture uses Tailwind CSS to create stunning layouts from scratch with
-          speed and precision. Its utility-first framework allows for rapid
-          styling, ensuring a polished, modern look across the platform.
-        </p>
-
-        <p>Responsive design that looks best everywhere.</p>
-        <p>
-          Nesture ensures a flawless user experience across all devices,
-          adapting seamlessly to different screen sizes. With a fully responsive
-          design, the platform maintains its consistency and aesthetics,
-          providing a smooth and engaging experience, whether on mobile, tablet,
-          or desktop.
-        </p>
-        */}
       </section>
     </>
   );

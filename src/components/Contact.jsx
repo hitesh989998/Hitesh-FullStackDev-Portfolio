@@ -4,7 +4,10 @@ import { FaLinkedin } from "react-icons/fa";
 
 export default function Contact() {
   return (
-    <main className="flex w-full h-[770px] gap-0 mb-8 p-0 rounded-3xl">
+    <main
+      id="contact"
+      className="flex w-full h-[770px] gap-0 mb-8 p-0 rounded-3xl"
+    >
       <section className="relative flex flex-col w-[15%] h-full bg-white p-4 items-center rounded-l-3xl">
         <div className="absolute inset-y-0 right-[-20px] bg-white w-[20px] z-10"></div>
         <div className="flex flex-col justify-between items-center h-full rounded-3xl">
