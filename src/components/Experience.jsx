@@ -26,7 +26,7 @@ export default function Experience() {
       </section>
 
       <section className="flex-1 bg-cover bg-center relative rounded-3xl overflow-hidden bg-[url('./glass2.jpg')]">
-        <div className="absolute inset-0 bg-black bg-opacity-30 hover:bg-opacity-50"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-5 hover:bg-opacity-50"></div>
         <div className="relative z-10 bg-white bg-opacity-30 p-6 rounded-3xl h-full flex flex-col justify-start">
           <h2 className="text-3xl font-bold text-white mb-4">Experience</h2>
 
@@ -53,7 +53,7 @@ export default function Experience() {
               <h3 className="text-lg font-semibold">
                 Digital Marketing Executive
               </h3>
-              <span className="text-sm italic">March 2024 - July 2024</span>
+              <span className="text-sm">March 2024 - July 2024</span>
             </div>
             <h4 className="text-xs">Rashail Tech Labs</h4>
             <p className="text-sm text-white">
