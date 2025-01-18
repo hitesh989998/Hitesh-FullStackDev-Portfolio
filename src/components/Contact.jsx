@@ -1,8 +1,93 @@
 import { FaGithub } from "react-icons/fa";
 import { FaDownload } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import { useState } from "react";
+import { toast } from "react-toastify";
+import emailjs from "@emailjs/browser";
+import { ref, set } from "firebase/database";
+import { database } from "../firebase";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Contact() {
+  const [state, setState] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const onChangeHandler = (e) => {
+    setState({
+      ...state,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const onSubmitHandler = async (e) => {
+    e.preventDefault();
+
+    // Check for empty fields
+    if (!state.name || !state.email || !state.message) {
+      toast("Please fill out all the fields!");
+      return;
+    }
+
+    try {
+      // Execute reCAPTCHA v3
+      const recaptchaToken = await window.grecaptcha.execute(
+        import.meta.env.VITE_RECAPTCHA_SITE_KEY,
+        { action: "submit" }
+      );
+
+      if (!recaptchaToken) {
+        toast("reCAPTCHA verification failed. Please try again.");
+        return;
+      }
+
+      const templateParamsToOwner = {
+        from_name: state.name,
+        from_email: state.email,
+        message: state.message,
+        "g-recaptcha-response": recaptchaToken,
+      };
+
+      const templateParamsToUser = {
+        to_name: state.name,
+        to_email: state.email,
+        "g-recaptcha-response": recaptchaToken,
+        subject: "Thank you for reaching out!",
+        message:
+          "Hello, thank you for contacting us! I will get back to you shortly.",
+      };
+
+      // Send email to the owner
+      const responseToOwner = await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        templateParamsToOwner,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+      console.log("Email sent to Hitesh Lalwani successfully", responseToOwner);
+
+      // Send thank you email to the user
+      const responseToUser = await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        "template_f7rpuuf", // Your thank-you template ID
+        templateParamsToUser,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+      console.log("Thank you email sent to user successfully", responseToUser);
+
+      // Save form data to Firebase
+      const dbRef = ref(database, "formResponses/" + new Date().getTime());
+      await set(dbRef, state);
+      toast("Form submitted successfully!");
+      setState({ name: "", email: "", message: "" }); // Reset form
+    } catch (error) {
+      console.error("Error:", error);
+      toast("Something went wrong. Please try again!");
+    }
+  };
+
   return (
     <main
       id="contact"
@@ -36,15 +121,28 @@ export default function Contact() {
           <h2 className="text-3xl font-bold text-white">Contact Information</h2>
           <div className="flex justify-start gap-4">
             <div className="flex items-center rounded-full">
-              <span className="text-sm shadow-dark text-white p-2">
+              <a
+                href="tel:+918827526398"
+                className="text-sm shadow-dark text-white p-2"
+              >
                 +91 8827 526398
-              </span>
+              </a>
             </div>
             <div className="flex items-center rounded-full">
-              <span className="text-sm shadow-dark text-white p-2">
+              <a
+                href="mailto:hitesh989998@gmail.com"
+                className="text-sm shadow-dark text-white p-2"
+              >
                 hitesh989998@gmail.com
-              </span>
+              </a>
             </div>
+            <a
+              href="https://wa.me/918827526398"
+              target="_blank"
+              className="flex items-center justify-center w-10 h-10 rounded-full shadow-lg text-white shadow-dark transition-all duration-300 shadow-hover2"
+            >
+              <FaWhatsapp size={24} />
+            </a>
             <a
               href="https://www.linkedin.com/in/hitesh-lalwani989998/"
               target="_blank"
@@ -87,21 +185,27 @@ export default function Contact() {
 
           <div className="w-[90%] flex justify-center items-center">
             <div className="w-full h-full p-2 bg-dark_primary backdrop-blur-sm rounded-3xl flex justify-center items-center">
-              <form className="w-full space-y-6">
+              <form className="w-full space-y-6" onSubmit={onSubmitHandler}>
                 <input
                   type="text"
                   placeholder="Your Name"
+                  onChange={onChangeHandler}
+                  name="name"
                   className="block w-full p-4 bg-transparent text-white rounded-lg shadow-form-input"
                 />
 
                 <input
                   type="email"
                   placeholder="Your Email"
+                  name="email"
+                  onChange={onChangeHandler}
                   className="block w-full p-4 bg-transparent text-white rounded-lg shadow-form-input"
                 />
 
                 <textarea
                   placeholder="Your Message"
+                  name="message"
+                  onChange={onChangeHandler}
                   className="block w-full p-4 bg-transparent text-white rounded-lg shadow-form-input h-32"
                 />
 
