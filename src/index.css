@@ -97,3 +97,9 @@
   background: #06223f;
   box-shadow: inset 10px 10px 10px #051f39, inset -10px -10px 10px #072545;
 }
+
+.customtext-darkblue {
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.07),
+    /* Slightly darker and deeper shadow */ -4px -4px 8px
+      rgba(255, 255, 255, 0.464); /* Softer light highlight */
+}

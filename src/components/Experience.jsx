@@ -2,13 +2,14 @@ export default function Experience() {
   return (
     <main
       id="experience"
-      className="flex w-full h-[770px] gap-2 mb-8 p-4 bg-blue-50 rounded-3xl"
+      className="flex w-full h-[770px] gap-2 mb-8 p-4 bg-white bg-opacity-10 backdrop-blur-sm shadow-lg rounded-3xl"
     >
-      <section className="flex-1 bg-cover bg-center relative rounded-3xl overflow-hidden bg-[url('/glass4.webp')]">
-        <div className="absolute inset-0 bg-black bg-opacity-30 hover:bg-opacity-50"></div>
+      <section className="flex-1 bg-white relative rounded-3xl overflow-hidden]">
         <div className="relative z-10 p-6 rounded-3xl h-full flex flex-col justify-start">
-          <h2 className="text-3xl font-bold text-white mb-4">About Me</h2>
-          <p className="text-sm text-white text-left">
+          <h2 className="text-5xl font-Poppins text-white customtext-darkblue mb-4">
+            About Me
+          </h2>
+          <p className="text-xs text-dark_primary text-left">
             I’m someone who thrives on upskilling, constantly learning, and
             pushing my skills to the next level. With a near-perfect mastery of
             the MERN stack, I specialize in building scalable, high-performance
@@ -27,10 +28,11 @@ export default function Experience() {
         />
       </section>
 
-      <section className="flex-1 bg-cover bg-center relative rounded-3xl overflow-hidden bg-[url('/glass2.jpg')]">
-        <div className="absolute inset-0 bg-black bg-opacity-5 hover:bg-opacity-50"></div>
-        <div className="relative z-10 bg-white bg-opacity-30 p-6 rounded-3xl h-full flex flex-col justify-start">
-          <h2 className="text-3xl font-bold text-white mb-4">Experience</h2>
+      <section className="flex-1 bg-blue-100 relative rounded-3xl overflow-hidden]">
+        <div className="relative z-10  p-6 rounded-3xl h-full flex flex-col justify-start">
+          <h2 className="text-5xl font-Poppins customtext-darkblue text-blue-100 mb-4">
+            Experience
+          </h2>
 
           <div className="mb-4">
             <div className="flex justify-between items-center text-white">
@@ -38,14 +40,14 @@ export default function Experience() {
               <span className="text-sm">August 2024 - Present</span>
             </div>
             <h4 className="text-xs">Kangaroo Software Pvt. Ltd.</h4>
-            <p className="text-sm text-white">
+            <p className="text-xs text-dark_primary mt-2 ">
               During my MERN Stack internship, I worked on real-world projects
               using React, Node.js, and MongoDB. I focused on deploying
               applications and writing production-level code to ensure
               scalability and performance. I collaborated with my team to debug,
               optimize, and deliver reliable solutions for live environments.
             </p>
-            <hr className="border-t border-gray-400 my-2" />
+            <hr className="border-t border-dark_primary my-2" />
           </div>
 
           <div className="mb-4">
@@ -56,12 +58,12 @@ export default function Experience() {
               <span className="text-sm">March 2024 - July 2024</span>
             </div>
             <h4 className="text-xs">Rashail Tech Labs</h4>
-            <p className="text-sm text-white">
+            <p className="text-xs text-dark_primary mt-2">
               Responsible for growing IG account 4X and Pinterest 10x in 5
-              months. Received laurels for reaching 3 lakh video plays in 3 days
-              on a viral IG post.
+              months. Received laurels for reaching 3 lakh plays in 3 days on a
+              viral IG post.
             </p>
-            <hr className="border-t border-gray-400 my-2" />
+            <hr className="border-t border-dark_primary my-2" />
           </div>
 
           <div>
@@ -74,15 +76,13 @@ export default function Experience() {
             <h4 className="text-xs">
               DigitalVia Technologies Pvt. Ltd (Formerly SG Gurukul)
             </h4>
-            <p className="text-sm text-white">
+            <p className="text-xs text-dark_primary mt-2">
               Focused on SEO, I conducted keyword and competitor research,
               optimized meta tags, and improved content for better ranking.
-              Created and submitted Web 2.0 properties, managed link-building,
-              and optimized Google My Business listings. Excelled in content
-              creation, social media marketing, and built custom WordPress
-              websites using Elementor and Astra.
+              Excelled in content creation, social media marketing, and built
+              custom WordPress websites using Elementor and Astra.
             </p>
-            <hr className="border-t border-gray-400 my-2" />
+            <hr className="border-t border-dark_primary my-2" />
           </div>
         </div>
         <img
@@ -92,10 +92,11 @@ export default function Experience() {
         />
       </section>
 
-      <section className="flex-1 bg-cover bg-center relative rounded-3xl overflow-hidden bg-[url('/glassk.jpg')]">
-        <div className="absolute inset-0 bg-black bg-opacity-20 hover:bg-opacity-50"></div>
-        <div className="relative z-10 bg-transparent bg-opacity-80 p-6 rounded-3xl h-full flex flex-col justify-start">
-          <h2 className="text-3xl font-bold text-white mb-4">Education</h2>
+      <section className="flex-1 bg-dark_primary relative rounded-3xl overflow-hidden ">
+        <div className="relative z-10 p-6 rounded-3xl h-full flex flex-col justify-start">
+          <h2 className="text-5xl  text-dark_primary font-Poppins shadow-dark-text  mb-4">
+            Education
+          </h2>
 
           <div className="mb-2">
             <div className="flex justify-between items-center text-white">
@@ -105,7 +106,7 @@ export default function Experience() {
               <span className="text-sm  text-white">2021 - 2023</span>
             </div>
             <h4 className="text-xs text-white">MBA, Marketing + IT </h4>
-            <p className="text-sm text-white">
+            <p className="text-xs text-white">
               Master of Business Administration (MBA) with dual specialization
               in Marketing and Information Systems Management (IT).
             </p>
@@ -120,7 +121,7 @@ export default function Experience() {
               <span className="text-sm  text-white mt-5">2018-2021</span>
             </div>
             <h4 className="text-xs text-white">BBA, Marketing</h4>
-            <p className="text-sm text-white">
+            <p className="text-xs text-white">
               Bachelor of Business Administration (BBA) with a specialization in
               Marketing, focusing on Business Administration and Management.
             </p>
@@ -129,7 +130,7 @@ export default function Experience() {
         <img
           src="./education.png"
           alt="Hitesh education"
-          className="absolute right-1 bottom-0 p-2 z-10 w-20 h-20"
+          className="absolute right-2 bottom-0 p-2 z-10 w-20 h-20"
         />
       </section>
     </main>

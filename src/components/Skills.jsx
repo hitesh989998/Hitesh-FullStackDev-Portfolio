@@ -32,7 +32,7 @@ const SkillsSection = () => {
       <section className="flex flex-col gap-1 w-1/2 h-full p-2 ">
         <div className="flex-1 bg-[#000336] rounded-3xl font-semibold relative">
           <div className="absolute inset-10 flex items-center justify-center">
-            <div className="aspect-square w-[90%] bg-no-repeat bg-cover bg-center relative  rounded-full bg-[url('./tree-1.png')]"></div>
+            <div className="aspect-square w-[90%] bg-no-repeat bg-cover bg-center relative  rounded-full bg-[url('/tree-1.png')]"></div>
           </div>
           <h3 className="absolute left-5 top-5 text-white text-2xl tracking-wide p-3 font-Poppins">
             Great web development isn't
