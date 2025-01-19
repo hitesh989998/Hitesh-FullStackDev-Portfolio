@@ -103,3 +103,9 @@
     /* Slightly darker and deeper shadow */ -4px -4px 8px
       rgba(255, 255, 255, 0.464); /* Softer light highlight */
 }
+
+html,
+body {
+  min-width: 1280px; /* Prevents shrinking below desktop size */
+  overflow-x: hidden;
+}

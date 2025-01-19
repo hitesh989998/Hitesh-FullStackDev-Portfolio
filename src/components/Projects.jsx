@@ -88,7 +88,7 @@ const Projects = () => {
             {technologies.map((tech, index) => (
               <p
                 key={index}
-                className="text-xs px-4 py-3 mx-0.5 shadow-dark rounded-lg  text-white"
+                className="lg:text-xs text-[8px] px-4 py-3 mx-0.5 shadow-dark rounded-lg  text-white"
               >
                 {tech}
               </p>
@@ -96,7 +96,7 @@ const Projects = () => {
           </div>
         </section>
 
-        <section className="grid grid-cols-3 grid-rows-[1fr,1fr] gap-2 lg:mt-14 mt-[105px] h-full w-full  ">
+        <section className="grid grid-cols-3 grid-rows-[1fr,1fr] gap-2 lg:mt-14 mt-[100px] h-full w-full  ">
           <div className="col-span-1 row-span-1 group">
             <div className="relative rounded-r-3xl overflow-hidden h-full">
               <img

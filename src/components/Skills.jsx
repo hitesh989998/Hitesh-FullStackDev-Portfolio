@@ -62,8 +62,8 @@ const SkillsSection = () => {
               </h3>
             </h3>
           </section>
-          <div class="bg-blue-100 rounded-3xl p-6 w-full h-fit">
-            <div class="flex flex-wrap gap-4 w-full h-[620px]">
+          <div className="bg-blue-100 rounded-3xl p-6 w-full h-fit">
+            <div className="flex flex-wrap gap-4 w-full h-[620px]">
               {capabilities.map((capability, index) => (
                 <p
                   key={index}
