@@ -97,7 +97,7 @@ export default function Contact() {
         <div className="absolute inset-y-0 right-[-20px] bg-white w-[20px] z-10"></div>
         <div className="flex flex-col justify-between items-center h-full rounded-3xl">
           <p className="text-lg text-[#1e3a8a]">Portfolio</p>
-          <p className="text-lg font-extrabold font-Pinyon tracking-widest text-neutral-300 top-10 absolute">
+          <p className="lg:text-lg text-base font-extrabold font-Pinyon tracking-widest text-neutral-300 top-10 absolute">
             Hitesh Lalwani
           </p>
           <p className="text-xs text-neutral-300">© 2025</p>
@@ -106,10 +106,10 @@ export default function Contact() {
 
       <section className="flex flex-col w-[45%] h-full bg-blue-50 p-4 rounded-l-3xl z-20 relative">
         <div className="flex flex-col justify-between h-full">
-          <p className="text-6xl text-[#1e3a8a]">
+          <p className="lg:text-6xl text-4xl text-[#1e3a8a]">
             A good coder writes code for the computer.
           </p>
-          <p className="text-2xl text-[#1e3a8a]">
+          <p className="lg:text-2xl text-lg text-[#1e3a8a]">
             a great coder writes code for humans.
           </p>
         </div>
@@ -119,11 +119,11 @@ export default function Contact() {
       <section className="flex flex-col w-[45%] h-full rounded-r-3xl p-6 pb-0 z-30 bg-dark_primary rounded-3xl relative">
         <div className="flex flex-col w-full gap-4 text-white">
           <h2 className="text-3xl font-bold text-white">Contact Information</h2>
-          <div className="flex justify-start gap-4">
+          <div className="flex justify-start items-center gap-4">
             <div className="flex items-center rounded-full">
               <a
                 href="tel:+918827526398"
-                className="text-sm shadow-dark text-white p-2"
+                className="lg:text-sm text-[10px] whitespace-nowrap shadow-dark text-white p-2"
               >
                 +91 8827 526398
               </a>
@@ -131,7 +131,7 @@ export default function Contact() {
             <div className="flex items-center rounded-full">
               <a
                 href="mailto:hitesh989998@gmail.com"
-                className="text-sm shadow-dark text-white p-2"
+                className="lg:text-sm text-[10px] shadow-dark text-white p-2"
               >
                 hitesh989998@gmail.com
               </a>
@@ -139,21 +139,21 @@ export default function Contact() {
             <a
               href="https://wa.me/918827526398"
               target="_blank"
-              className="flex items-center justify-center w-10 h-10 rounded-full shadow-lg text-white shadow-dark transition-all duration-300 shadow-hover2"
+              className="flex items-center justify-center h-7 w-7 lg:w-10 lg:h-10 rounded-full shadow-lg text-white shadow-dark transition-all duration-300 shadow-hover2"
             >
               <FaWhatsapp size={24} />
             </a>
             <a
               href="https://www.linkedin.com/in/hitesh-lalwani989998/"
               target="_blank"
-              className="flex items-center justify-center w-10 h-10 rounded-full shadow-lg text-white shadow-dark transition-all duration-300 shadow-hover2"
+              className="flex items-center justify-center h-7 w-7 lg:w-10 lg:h-10 rounded-full shadow-lg text-white shadow-dark transition-all duration-300 shadow-hover2"
             >
               <FaLinkedin size={24} />
             </a>
             <a
               href="https://github.com/hitesh989998"
               target="_blank"
-              className="flex items-center justify-center w-10 h-10 rounded-full shadow-lg text-white shadow-dark transition-all duration-300 shadow-hover2"
+              className="flex items-center justify-center h-7 w-7 lg:w-10 lg:h-10 rounded-full shadow-lg text-white shadow-dark transition-all duration-300 shadow-hover2"
             >
               <FaGithub size={24} />
             </a>
@@ -172,7 +172,7 @@ export default function Contact() {
             </span>
           </a>
         </div>
-        <h2 className="text-white top-72 right-1 p-1 font-Pinyon absolute z-10 whitespace-nowrap text-4xl tracking-widest">
+        <h2 className="text-white top-72 right-1 p-1 font-Pinyon absolute z-10 whitespace-nowrap lg:text-4xl text-2xl tracking-widest">
           Let’s build something great together.{" "}
         </h2>
 
