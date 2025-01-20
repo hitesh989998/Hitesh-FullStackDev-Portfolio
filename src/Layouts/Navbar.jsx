@@ -21,17 +21,20 @@ const Navbar = () => {
 
   return (
     <div className="w-full flex justify-center">
-      <div className="sm:cursor-pointer fixed top-10 left-10 z-[999] rounded-lg bg-white/40 p-2">
-        <h2 className="text-2xl font-semibold tracking-wider">{"<hitesh/>"}</h2>
+      <div className="sm:cursor-pointer fixed lg:top-10 top-3 lg:left-10 left-2 z-[999] lg:rounded-lg rounded-sm bg-white/40 lg:p-2 p-0.5">
+        <h2 className="lg:text-2xl text-xs font-semibold tracking-wider">
+          {"<hitesh/>"}
+        </h2>
       </div>
       <div
-        className="sm:cursor-pointer fixed top-10 right-10 z-[999] rounded-lg bg-white/40 p-2"
+        className="sm:cursor-pointer fixed lg:top-10 top-3 lg:right-10 right-2 lg:mr-0 mr-0.5 z-[999] lg:rounded-lg rounded-sm bg-white/40 lg:p-2 p-0.5"
         onClick={() => setShowMenu(!showMenu)}
       >
-        <HiMenuAlt2 size={34} />
+        <HiMenuAlt2 className="lg:block hidden" size={34} />
+        <HiMenuAlt2 className="lg:hidden block" size={14} />
       </div>
       <nav
-        className={`fixed  z-[999] flex items-center gap-5 bg-slate-200/60 px-6 py-3 backdrop-blur-sm rounded-full text-dark_primary duration-300 ${
+        className={`fixed z-[999] flex items-center lg:gap-5 gap-1 bg-slate-200/60 lg:px-6 px-2 lg:py-3 py-1 backdrop-blur-sm rounded-full text-dark_primary duration-300 ${
           showMenu ? "bottom-10" : "bottom-[-100%]"
         }`}
       >
@@ -39,15 +42,23 @@ const Navbar = () => {
           <a
             href={`#${item.id}`}
             onClick={() => setActive(i)}
-            className={`text-lg p-3 flex items-center flex-col rounded-full sm:cursor-pointer ${
-              i === active && "bg-dark_primary text-white"
+            className={`lg:text-lg text-base lg:p-3 p-2 flex items-center flex-col rounded-full sm:cursor-pointer ${
+              i === active ? "bg-dark_primary text-white" : ""
             }`}
             key={i}
+            style={{
+              width: "50px",
+              height: "50px",
+              maxWidth: "50px",
+              overflow: "hidden",
+            }} // Ensure fixed size and hide overflow
           >
-            <div>
+            <div
+              className="flex items-center justify-center"
+              style={{ width: "100%", height: "100%" }}
+            >
               <item.icon />
-            </div>{" "}
-            <div className="text-xs"> {item.title} </div>
+            </div>
           </a>
         ))}
       </nav>

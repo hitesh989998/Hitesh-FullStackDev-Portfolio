@@ -9,8 +9,8 @@ import { ToastContainer } from "react-toastify";
 
 const App = () => {
   return (
-    <div className="bg-[url('/magicpattern-starry-night-1736853171922.png')]">
-      <div className="p-8">
+    <div className="bg-[url('/magicpattern-starry-night-1736853171922.png')] min-h-screen overflow-x-hidden">
+      <div className="lg:p-8 p-2">
         <Navbar />
         <Hero />
         <Skills />

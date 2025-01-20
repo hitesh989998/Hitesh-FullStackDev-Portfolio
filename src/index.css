@@ -70,15 +70,33 @@
 }
 
 .shadow-neumorph-soft {
-  border-radius: 18px;
   background: #dbeafe;
   box-shadow: 5px 5px 10px #d0def1, -5px -5px 10px #e6f6ff;
 }
 
-.shadow-dark {
-  border-radius: 18px;
-  background: #06223f;
-  box-shadow: 5px 5px 0px #051f39, -5px -5px 0px #072545;
+@media (max-width: 1024px) {
+  .shadow-neumorph-soft {
+    background: #dbeafe;
+    box-shadow: 3px 3px 6px #c0d3e8, -3px -3px 6px #eef9ff; /* Slightly sharper for mobile */
+  }
+}
+
+/* Desktop only */
+@media (min-width: 1025px) {
+  .shadow-dark {
+    border-radius: 18px;
+    background: #06223f;
+    box-shadow: 5px 5px 0px #051f39, -5px -5px 0px #072545;
+  }
+}
+
+/* Mobile only */
+@media (max-width: 1024px) {
+  .shadow-dark {
+    border-radius: 5px; /* Smaller radius for mobile */
+    background: #06223f;
+    box-shadow: 1px 1px 1px #051f39, -1px -1px 1px #072545; /* Adjust shadow for mobile */
+  }
 }
 
 .shadow-form-input {
@@ -87,9 +105,23 @@
   box-shadow: inset 12px 12px 24px #051f39, inset -12px -12px 24px #072545;
 }
 
+@media (max-width: 1024px) {
+  .shadow-form-input {
+    border-radius: 8px; /* Smaller border radius for mobile */
+    box-shadow: inset 6px 6px 12px #051f39, inset -6px -6px 12px #072545; /* Adjusted shadow for smaller screens */
+  }
+}
+
 .shadow-dark-text {
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2),
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3),
     /* Darker shadow for depth */ -3px -3px 6px rgba(255, 255, 255, 0.05); /* Subtle light highlight */
+}
+
+@media (max-width: 1024px) {
+  .shadow-dark-text {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2),
+      /* Lighter shadow on mobile */ -1px -1px 2px rgba(255, 255, 255, 0.1); /* Softer highlight */
+  }
 }
 
 .shadow-hover2:hover {
@@ -104,8 +136,9 @@
       rgba(255, 255, 255, 0.464); /* Softer light highlight */
 }
 
-html,
-body {
-  min-width: 1280px; /* Prevents shrinking below desktop size */
-  overflow-x: hidden;
+@media (max-width: 1024px) {
+  .customtext-darkblue {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.08),
+      /* Lighter shadow on mobile */ -1px -1px 2px rgba(255, 255, 255, 0.6); /* Lighter highlight */
+  }
 }
