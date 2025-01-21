@@ -113,7 +113,7 @@ export default function Contact() {
           <p className="lg:text-6xl text-[10px] text-[#1e3a8a]">
             A good coder writes code for the computer.
           </p>
-          <p className="lg:text-2xl -bottom-1.5 relative lg:bottom-0 text-[7px] text-[#1e3a8a]">
+          <p className="lg:text-2xl -bottom-1.5 relative lg:bottom-0 text-[6px] text-[#1e3a8a]">
             a great coder writes code for humans.
           </p>
         </div>

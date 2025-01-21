@@ -281,7 +281,7 @@ const Projects = () => {
                 alt="Project 4"
                 className="w-full h-full lg:object-contain"
               />
-              <div className="absolute lg:inset-5 inset-0 inset-y-0 bg-black bg-opacity-0 group-hover:bg-opacity-90 transition-all duration-300 flex items-end justify-center p-4 rounded-3xl">
+              <div className="absolute lg:inset-5 inset-0 lg:-my-5 bg-black bg-opacity-0 group-hover:bg-opacity-90 transition-all duration-300 flex items-end justify-center p-4 rounded-3xl">
                 <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-left">
                   <h3 className="lg:text-base text-[3px] text-blue-500">
                     Responsive design that looks best everywhere.
