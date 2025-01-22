@@ -34,7 +34,9 @@ const Projects = () => {
 
             <div
               className="flex flex-col items-center justify-center text-white cursor-pointer"
-              onClick={() => window.open("https://nesture.web.app", "_blank")}
+              onClick={() =>
+                window.open("https://github.com/hitesh989998/nesture", "_blank")
+              }
             >
               <div className="group hover:text-blue-900 flex flex-col items-center justify-center">
                 <FaGithubSquare className="lg:text-6xl text-lg group-hover:text-blue-900" />
