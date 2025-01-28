@@ -168,7 +168,7 @@ export default function Contact() {
 
         <div className="lg:mt-4 mt-1 mb-28">
           <a
-            href="/HiteshLalwani.pdf"
+            href="/Hitesh Lalwani.pdf"
             download
             className="w-full lg:p-6 p-2 text-white rounded-3xl shadow-xl flex items-center justify-center lg:space-x-4 space-x-1 shadow-dark transition-all duration-300 shadow-hover2"
           >
