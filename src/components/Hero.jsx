@@ -36,7 +36,7 @@ const Hero = () => {
             <br />
             <div className="flex justify-end">
               <a href="#contact">
-                <button className="lg:px-6 lg:py-3 py-1 px-1 lg:rounded-lg shadow-md bg-gray-200 text-dark_primary font-semibold lg:text-base text-[5px] hover:shadow-inner transition duration-300 relative lg:top-0 -top-8 rounded-sm">
+                <button className="lg:px-6 lg:py-3 py-1 px-1 lg:rounded-lg lg:shadow-md shadow-sm text-dark_primary font-semibold lg:text-base text-[5px] hover:shadow-inner transition duration-300 relative lg:top-0 -top-8 rounded-sm ">
                   Connect with me
                 </button>
               </a>

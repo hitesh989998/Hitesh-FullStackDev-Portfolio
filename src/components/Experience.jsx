@@ -150,7 +150,7 @@ export default function Experience() {
         <img
           src="./education.png"
           alt="Hitesh education"
-          className="absolute lg:right-2 -right-1 -bottom-1 p-2 z-10 lg:w-20 lg:h-20 w-9 h-9"
+          className="absolute lg:right-2 -right-1 lg:bottom-2 -bottom-1 p-2 z-10 lg:w-20 lg:h-20 w-9 h-9"
         />
       </section>
     </main>
