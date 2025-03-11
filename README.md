@@ -5,15 +5,15 @@ Welcome to my personal **Portfolio Website**! Designed with a sleek **neumorphis
 
 ## Features
 
-### Contact Form:
-- **SendGrid SMTP + Email.js**: Seamless email sending integration to handle form submissions.
-- **Google Recaptcha API**: Site-wide protection to prevent spam and ensure secure submissions.
+### SMTP Setup:
+- **SendGrid SMTP + Email.js**: Email sending integration to handle form submissions.
+- **Google Recaptcha API**: Site-wide protection to prevent spam and secure submissions.
 
-### Hosting & Database:
-- **Firebase Hosting**: Fast and reliable hosting for your portfolio site.
+### Firebase Hosting & Database:
+- **Hosting**: Fast and reliable hosting, courtesy of Firebase
 - **Realtime Database**: Manage and store data in real-time for an efficient user experience.
 
-### Design:
+### Tailwind CSS:
 - **Neumorphism Design**: A modern, clean, and attractive UI built using **Tailwind CSS** for responsiveness.
 
 ---
