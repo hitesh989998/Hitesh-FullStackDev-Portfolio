@@ -14,7 +14,7 @@ Welcome to my personal **Portfolio Website**! Designed with a sleek **neumorphis
 - **Realtime Database**: Manage and store data in real-time for an efficient user experience.
 
 ### Tailwind CSS:
-- **Neumorphism Design**: A modern, clean, and attractive UI built using **Tailwind CSS** for responsiveness.
+- **Neumorphism Design**: A modern, clean, and attractive UI built using **Tailwind CSS**.
 
 ---
 
