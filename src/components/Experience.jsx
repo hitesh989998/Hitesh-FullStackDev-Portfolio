@@ -40,7 +40,7 @@ export default function Experience() {
                 MERN Stack Intern
               </h3>
               <span className="lg:text-sm text-[3px]">
-                August 2024 - Present
+                August 2024 - January 2025
               </span>
             </div>
             <h4 className="lg:text-xs text-[3px] mt-0 lg:mt-0">
