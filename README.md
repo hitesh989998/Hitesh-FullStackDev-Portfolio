@@ -6,8 +6,7 @@ Welcome to my personal **Portfolio Website**! Designed with a sleek **neumorphis
 ## Features
 
 ### SMTP Setup:
-- **SendGrid SMTP + Email.js**: Email sending integration to handle form submissions.
-- **Google Recaptcha API**: Site-wide protection to prevent spam and secure submissions.
+- **SendGrid SMTP + Email.js**: Integrated email functionality that sends a "thank you" message to the user upon form submission, while also forwarding the submitted data to me.
 
 ### Firebase Hosting & Database:
 - **Hosting**: Fast and reliable hosting, courtesy of Firebase
@@ -15,6 +14,13 @@ Welcome to my personal **Portfolio Website**! Designed with a sleek **neumorphis
 
 ### Tailwind CSS:
 - **Neumorphism Design**: A modern, clean, and attractive UI built using **Tailwind CSS**.
+
+### Google Recaptcha v3 API:
+- **Spam Prevention**: To avoid automatic form submissions from bots, Google recaptcha works silently in the background.
+
+### Google Analytics + Hotjar Heatmaps + Screen Recordings:
+- **Yes, I can see you :)**: With Hotjar and Google Analytics integrated, I can track visits, clicks, heatmaps, screen recordings, time on site, device details, etc. This data is solely for feedback—to help me refine my work and continually improve the user experience.
+
 
 ---
 
