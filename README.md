@@ -19,7 +19,7 @@ Welcome to my personal **Portfolio Website**! Designed with a sleek **neumorphis
 - **Spam Prevention**: To avoid automatic form submissions from bots, Google recaptcha works silently in the background.
 
 ### Google Analytics + Hotjar Heatmaps + Screen Recordings:
-- **Yes, I can see you :)**: With Hotjar and Google Analytics integrated, I can track visits, clicks, heatmaps, screen recordings, time on site, device details, etc. This data is solely for feedback—to help me refine my work and continually improve the user experience.
+- **Yes, I can see you :)**  With Hotjar and Google Analytics integrated, I can track visits, clicks, heatmaps, screen recordings, time on site, device details, etc. This data is solely for feedback—to help me refine my work and continually improve the user experience.
 
 
 ---
