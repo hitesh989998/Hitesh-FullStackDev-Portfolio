@@ -1,343 +1,532 @@
-import { FaGithubSquare } from "react-icons/fa";
-import { SiFirebase } from "react-icons/si";
-import { SiCoronarenderer } from "react-icons/si";
+import { SiFirebase, SiCoronarenderer, SiVercel } from "react-icons/si";
+import ProjectCard from "./ProjectCard";
+import Nesture from "./Nesture";
 
-const technologies = [
-  "React.js",
-  "Node.js",
-  "MongoDB",
-  "Express.js",
-  "Stripe",
-  "React Recharts",
-  "Redux",
-  "REST APIs",
-  "React Helmet",
-  "JWT Authentication",
-  "Bcrypt",
-  "Multer",
-  "Toastify",
-  "Tailwind CSS",
+const projectsData = [
+  {
+    title: "Enquiry CRM",
+    accent: "blue",
+    subheading: "Customer Relationship Management System",
+    role: "Complete Frontend and Backend development",
+    description: `Enquiry CRM is a comprehensive Customer Relationship Management system designed to streamline enquiry handling, lead tracking, and customer communication. The platform enables businesses to efficiently manage their sales pipeline from initial contact to conversion.
+
+Built with a focus on user experience and data integrity, the system features real-time notifications, automated follow-up reminders, and detailed analytics dashboards. The intuitive interface allows sales teams to track every interaction, prioritize hot leads, and never miss a follow-up opportunity. Advanced filtering and search capabilities make it easy to find and manage customer records across thousands of entries.`,
+    technologies: [
+      "React.js",
+      "Node.js",
+      "MongoDB",
+      "Express.js",
+      "REST APIs",
+      "JWT Authentication",
+      "Tailwind CSS",
+      "React Query",
+      "Chart.js",
+      "Nodemailer",
+    ],
+    links: [
+      {
+        label: "View Demo",
+        url: "#",
+        tooltip: "Live Demo",
+      },
+    ],
+    images: [
+      {
+        src: "./E1.png",
+        alt: "CRM Dashboard",
+        title: "Intuitive Dashboard with Real-Time Metrics",
+        description:
+          "A comprehensive dashboard displaying lead statistics, conversion rates, and team performance at a glance.",
+      },
+      {
+        src: "./E2.png",
+        alt: "Lead Management",
+        title: "Smart Lead Management System",
+        description:
+          "Efficiently organize and prioritize leads with custom tags, status tracking, and automated scoring.",
+      },
+      {
+        src: "./E3.png",
+        alt: "Sales Pipeline",
+        title: "Visual Sales Pipeline",
+        description:
+          "Drag-and-drop pipeline view to track deals through every stage of the sales process.",
+      },
+      {
+        src: "./E4.png",
+        alt: "Analytics",
+        title: "Advanced Analytics & Reporting",
+        description:
+          "Detailed reports and charts to analyze sales trends, team performance, and revenue forecasts.",
+      },
+      {
+        src: "./E5.png",
+        alt: "Contact Management",
+        title: "Centralized Contact Database",
+        description:
+          "Store and manage all customer information with complete interaction history and notes.",
+      },
+      {
+        src: "./E6.png",
+        alt: "Task Management",
+        title: "Integrated Task & Follow-up System",
+        description:
+          "Never miss a follow-up with automated reminders and task scheduling for each lead.",
+      },
+    ],
+    secondaryImages: [
+      {
+        src: "./E7.png",
+        alt: "Email Integration",
+        title: "Seamless Email Integration",
+        description:
+          "Send and track emails directly from the CRM with templates and automated sequences.",
+      },
+      {
+        src: "./E8.png",
+        alt: "Mobile View",
+        title: "Mobile-First Responsive Design",
+        description:
+          "Access your CRM on any device with a fully responsive interface optimized for mobile sales teams.",
+      },
+      {
+        src: "./E9.png",
+        alt: "Additional Feature",
+        title: "Additional CRM Feature",
+        description:
+          "Extended functionality for enhanced customer relationship management.",
+      },
+      {
+        src: "./E10.png",
+        alt: "Extra Feature",
+        title: "Extra CRM Capability",
+        description:
+          "Additional tools and features to maximize your CRM efficiency.",
+      },
+    ],
+  },
+  {
+    title: "CX Pulse Tech",
+    accent: "purple",
+    subheading: "Customer Experience Analytics Platform",
+    role: "Full Stack Developer, handled client communication",
+    description: `CX Pulse Tech is a customer experience analytics platform that provides real-time insights into customer behavior and satisfaction metrics. The platform aggregates data from multiple touchpoints to deliver actionable intelligence for improving customer journeys.
+
+Working directly with the client, I translated business requirements into technical solutions while maintaining clear communication throughout the development process. The platform features sentiment analysis, NPS tracking, customer journey mapping, and predictive analytics powered by machine learning algorithms. Interactive dashboards allow stakeholders to drill down into specific metrics and identify areas for improvement.`,
+    technologies: [
+      "React.js",
+      "Node.js",
+      "MongoDB",
+      "Express.js",
+      "Python",
+      "TensorFlow",
+      "Analytics APIs",
+      "Recharts",
+      "Socket.io",
+      "Redis",
+      "Tailwind CSS",
+    ],
+    links: [
+      {
+        label: "View Platform",
+        url: "#",
+        tooltip: "Live Platform",
+      },
+    ],
+    images: [
+      {
+        src: "./C1.png",
+        alt: "CX Dashboard",
+        title: "Real-Time Customer Experience Dashboard",
+        description:
+          "Monitor customer satisfaction scores, NPS, and sentiment trends in real-time across all channels.",
+      },
+      {
+        src: "./C2.png",
+        alt: "Journey Mapping",
+        title: "Interactive Customer Journey Mapping",
+        description:
+          "Visualize and analyze complete customer journeys to identify pain points and optimization opportunities.",
+      },
+      {
+        src: "./C3.png",
+        alt: "Sentiment Analysis",
+        title: "AI-Powered Sentiment Analysis",
+        description:
+          "Machine learning algorithms analyze customer feedback to detect sentiment and emerging trends.",
+      },
+      {
+        src: "./C4.png",
+        alt: "Survey Management",
+        title: "Dynamic Survey Builder",
+        description:
+          "Create and deploy customized surveys with branching logic and real-time response tracking.",
+      },
+      {
+        src: "./C5.png",
+        alt: "Reports",
+        title: "Automated Report Generation",
+        description:
+          "Schedule and generate comprehensive reports with insights and recommendations for stakeholders.",
+      },
+      {
+        src: "./C6.png",
+        alt: "Alerts",
+        title: "Smart Alert System",
+        description:
+          "Receive instant notifications when customer satisfaction drops or critical feedback is received.",
+      },
+    ],
+    secondaryImages: [
+      {
+        src: "./C7.png",
+        alt: "Integrations",
+        title: "Multi-Channel Data Integration",
+        description:
+          "Connect with CRM, support tickets, social media, and other platforms for unified customer insights.",
+      },
+      {
+        src: "./C8.png",
+        alt: "Mobile App",
+        title: "Executive Mobile Dashboard",
+        description:
+          "Access key metrics and alerts on-the-go with a dedicated mobile experience for leadership.",
+      },
+      {
+        src: "./C9.png",
+        alt: "Additional Analytics",
+        title: "Additional Analytics Feature",
+        description:
+          "Extended analytics capabilities for deeper customer experience insights.",
+      },
+      {
+        src: "./C10.png",
+        alt: "Extra Feature",
+        title: "Extra CX Capability",
+        description:
+          "Additional tools to enhance customer experience management.",
+      },
+    ],
+  },
+  {
+    title: "Super Club Holidays",
+    accent: "orange",
+    subheading: "Holiday Booking & Travel Management Platform",
+    role: "Team Lead & Full Stack Developer. Handled client communication, conducted code reviews, merged PRs, and worked on complex implementations",
+    description: `Super Club Holidays is a comprehensive holiday booking and travel management platform designed for a travel agency to streamline their operations. As Team Lead, I coordinated development efforts, conducted code reviews, and ensured high-quality deliverables while maintaining direct communication with the client.
+
+The platform handles everything from package browsing and booking to itinerary management and payment processing. Features include dynamic pricing, availability management, customer portals, and an admin dashboard for managing bookings, agents, and commissions. The system integrates with multiple payment gateways and third-party travel APIs for real-time availability and pricing.`,
+    technologies: [
+      "React.js",
+      "Node.js",
+      "MongoDB",
+      "Express.js",
+      "Payment Gateway",
+      "REST APIs",
+      "Redux Toolkit",
+      "AWS S3",
+      "Tailwind CSS",
+      "React PDF",
+      "Nodemailer",
+    ],
+    links: [
+      {
+        label: "View Website",
+        url: "#",
+        tooltip: "Live Website",
+      },
+    ],
+    images: [
+      {
+        src: "./S1.png",
+        alt: "Homepage",
+        title: "Stunning Travel Homepage",
+        description:
+          "An engaging homepage showcasing featured destinations, deals, and seamless search functionality.",
+      },
+      {
+        src: "./S2.png",
+        alt: "Holiday Packages",
+        title: "Dynamic Holiday Packages",
+        description:
+          "Browse and filter holiday packages with real-time pricing, availability, and detailed itineraries.",
+      },
+      {
+        src: "./S3.png",
+        alt: "Booking Flow",
+        title: "Streamlined Booking Process",
+        description:
+          "Multi-step booking flow with traveler details, add-ons selection, and secure payment integration.",
+      },
+      {
+        src: "./S4.png",
+        alt: "Admin Dashboard",
+        title: "Powerful Admin Dashboard",
+        description:
+          "Manage bookings, packages, agents, and commissions with comprehensive admin controls.",
+      },
+      {
+        src: "./S5.png",
+        alt: "Customer Portal",
+        title: "Customer Self-Service Portal",
+        description:
+          "Customers can view bookings, download itineraries, and manage their travel documents.",
+      },
+      {
+        src: "./S6.png",
+        alt: "Payment Integration",
+        title: "Secure Payment Processing",
+        description:
+          "Multiple payment options with secure gateway integration and automated invoice generation.",
+      },
+    ],
+    secondaryImages: [
+      {
+        src: "./S7.png",
+        alt: "Itinerary Builder",
+        title: "Custom Itinerary Builder",
+        description:
+          "Create and customize detailed day-by-day itineraries with activities, accommodations, and transfers.",
+      },
+      {
+        src: "./S8.png",
+        alt: "Mobile Experience",
+        title: "Mobile-Optimized Booking",
+        description:
+          "Fully responsive design ensuring seamless booking experience across all devices.",
+      },
+      {
+        src: "./S9.png",
+        alt: "Additional Feature",
+        title: "Additional Travel Feature",
+        description:
+          "Extended functionality for enhanced travel booking experience.",
+      },
+      {
+        src: "./S10.png",
+        alt: "Extra Feature",
+        title: "Extra Travel Capability",
+        description:
+          "Additional tools to maximize travel management efficiency.",
+      },
+    ],
+  },
+  {
+    title: "Fiveline HMS",
+    accent: "cyan",
+    subheading: "Hospital Management System",
+    role: "Worked on Master Data and Settings module - complete Frontend and Backend",
+    description: `Fiveline HMS is a Hospital Management System designed to streamline healthcare operations and improve patient care delivery. I was responsible for developing the Master Data and Settings modules, which form the backbone of the entire system configuration.
+
+The Master Data module handles all reference data including departments, doctors, procedures, diagnosis codes, insurance providers, and pricing configurations. The Settings module provides administrators with granular control over system behavior, user permissions, notification preferences, and integration settings. Both modules feature comprehensive audit logging, data validation, and role-based access control.`,
+    technologies: [
+      "React.js",
+      "Node.js",
+      "MongoDB",
+      "Express.js",
+      "REST APIs",
+      "JWT Authentication",
+      "Role-Based Access",
+      "Tailwind CSS",
+      "React Table",
+      "Formik",
+      "Yup Validation",
+    ],
+    links: [
+      {
+        label: "View System",
+        url: "#",
+        tooltip: "HMS Platform",
+      },
+    ],
+    images: [
+      {
+        src: "./h1.png",
+        alt: "Master Data",
+        title: "Comprehensive Master Data Management",
+        description:
+          "Manage all reference data including departments, procedures, diagnosis codes, and pricing in one place.",
+      },
+      {
+        src: "./h2.png",
+        alt: "Doctor Management",
+        title: "Doctor & Staff Directory",
+        description:
+          "Complete staff management with schedules, specializations, and department assignments.",
+      },
+      {
+        src: "./h3.png",
+        alt: "System Settings",
+        title: "Granular System Configuration",
+        description:
+          "Fine-tune every aspect of the HMS with comprehensive settings and preference controls.",
+      },
+      {
+        src: "./h4.png",
+        alt: "Role Management",
+        title: "Role-Based Access Control",
+        description:
+          "Define custom roles with specific permissions for different user types across the hospital.",
+      },
+      {
+        src: "./h5.png",
+        alt: "Audit Logs",
+        title: "Complete Audit Trail",
+        description:
+          "Track all changes to master data and settings with detailed audit logs for compliance.",
+      },
+      {
+        src: "./h6.png",
+        alt: "Data Import",
+        title: "Bulk Data Import/Export",
+        description:
+          "Import and export master data in bulk with validation and error handling for data migration.",
+      },
+    ],
+    secondaryImages: [
+      {
+        src: "./h7.png",
+        alt: "Insurance Config",
+        title: "Insurance Provider Configuration",
+        description:
+          "Manage insurance providers, coverage plans, and claim settings for seamless billing integration.",
+      },
+      {
+        src: "./h8.png",
+        alt: "Notification Settings",
+        title: "Notification & Alert Configuration",
+        description:
+          "Configure email, SMS, and in-app notifications for appointments, results, and system alerts.",
+      },
+      {
+        src: "./h9.png",
+        alt: "Additional Feature",
+        title: "Additional HMS Feature",
+        description:
+          "Extended functionality for enhanced hospital management.",
+      },
+      {
+        src: "./h10.png",
+        alt: "Extra Feature",
+        title: "Extra HMS Capability",
+        description:
+          "Additional tools to maximize hospital management efficiency.",
+      },
+    ],
+  },
+  {
+    title: "Zernyx",
+    accent: "green",
+    subheading: "AI-Powered Patent Intelligence Platform",
+    role: "Allocated as a resource to an existing client project, working with client developers to add new features, solve bugs, and participate in daily standups",
+    description: `Zernyx is a technology platform integrated with AI microservices for intelligent patent analysis and management. The platform enables users to post, file, and manage third-party patents while leveraging AI-powered insights for patent research and competitive analysis.
+
+Working as an embedded resource with the client's development team, I contributed to feature development, bug fixes, and participated in daily standups following agile methodologies. The platform uses advanced NLP models to analyze patent documents, extract key claims, and identify potential conflicts or opportunities. Real-time collaboration features allow legal teams and inventors to work together on patent applications.`,
+    technologies: [
+      "Next.js",
+      "FastAPI",
+      "Azure",
+      "OpenAI APIs",
+      "Redis",
+      "Socket.io",
+      "Docker",
+      "PostgreSQL",
+      "TypeScript",
+      "Tailwind CSS",
+      "Prisma",
+    ],
+    links: [
+      {
+        label: "View Platform",
+        url: "#",
+        tooltip: "Zernyx Platform",
+        icon: <SiVercel />,
+      },
+    ],
+    images: [
+      {
+        src: "./z1.png",
+        alt: "Zernyx Homepage",
+        title: "AI-Powered Patent Intelligence Platform",
+        description:
+          "A modern interface for exploring patents, filing applications, and accessing AI-driven insights.",
+      },
+      {
+        src: "./z2.png",
+        alt: "Patent Search",
+        title: "Intelligent Patent Search",
+        description:
+          "AI-enhanced search with natural language queries, semantic matching, and advanced filters.",
+      },
+      {
+        src: "./z3.png",
+        alt: "AI Analysis",
+        title: "AI-Powered Patent Analysis",
+        description:
+          "Automated extraction of key claims, prior art identification, and patentability assessment.",
+      },
+      {
+        src: "./z4.png",
+        alt: "Patent Filing",
+        title: "Streamlined Filing Workflow",
+        description:
+          "Guided patent filing process with AI suggestions for claims and description optimization.",
+      },
+      {
+        src: "./z5.png",
+        alt: "Collaboration",
+        title: "Real-Time Collaboration",
+        description:
+          "Work together with legal teams and inventors on patent applications with live editing.",
+      },
+      {
+        src: "./z6.png",
+        alt: "Dashboard",
+        title: "Portfolio Management Dashboard",
+        description:
+          "Track patent portfolio, deadlines, maintenance fees, and competitive landscape in one view.",
+      },
+    ],
+    secondaryImages: [
+      {
+        src: "./z7.png",
+        alt: "AI Insights",
+        title: "Competitive Intelligence Insights",
+        description:
+          "AI-generated reports on competitor patents, technology trends, and white space opportunities.",
+      },
+      {
+        src: "./z8.png",
+        alt: "API Integration",
+        title: "Enterprise API Integration",
+        description:
+          "RESTful APIs for integrating patent data and AI insights into existing enterprise systems.",
+      },
+      {
+        src: "./z9.png",
+        alt: "Additional Feature",
+        title: "Additional Zernyx Feature",
+        description:
+          "Extended functionality for enhanced patent intelligence.",
+      },
+      {
+        src: "./z10.png",
+        alt: "Extra Feature",
+        title: "Extra Zernyx Capability",
+        description:
+          "Additional tools to maximize patent management efficiency.",
+      },
+    ],
+  },
 ];
 
 const Projects = () => {
   return (
     <>
-      <main
-        className="flex flex-col bg-dark_primary w-full lg:h-[770px] h-[300px] lg:rounded-3xl rounded-md mb-3 lg:mb-8 "
-        id="projects"
-      >
-        <section className="flex flex-col w-full lg:p-4 p-1  lg:h-[30%]">
-          <div className="flex justify-between items-center">
-            <h1 className="tracking-wide text-white lg:text-6xl text-lg font-extrabold">
-              Nesture
-            </h1>
-
-            <div
-              className="flex flex-col items-center justify-center text-white cursor-pointer"
-              onClick={() =>
-                window.open("https://github.com/hitesh989998/nesture", "_blank")
-              }
-            >
-              <div className="group hover:text-blue-900 flex flex-col items-center justify-center">
-                <FaGithubSquare className="lg:text-6xl text-lg group-hover:text-blue-900" />
-                <p className="lg:text-sm text-[5px] group-hover:text-blue-900 text-white">
-                  Github
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex space-x-4 lg:my-4 my-2">
-            <div className="group" title="Hosted On Firebase">
-              <button
-                className="flex items-center lg:text-sm text-[5px] underline text-white group-hover:text-blue-900"
-                onClick={() => window.open("https://nesture.web.app", "_blank")}
-              >
-                View Website
-                <SiFirebase className="lg:ml-2 ml-0.5 text-white group-hover:text-blue-900" />
-              </button>
-            </div>
-            <div className="group" title="Hosted On Render">
-              <button
-                className="flex items-center lg:text-sm text-[5px] group-hover:text-blue-900 underline text-white hover:text-blue-900"
-                onClick={() =>
-                  window.open("https://nesture.onrender.com", "_blank")
-                }
-              >
-                Backend Server
-                <SiCoronarenderer className="lg:ml-2 ml-0.5 text-white group-hover:text-blue-900" />
-              </button>
-            </div>
-          </div>
-
-          <p className="lg:text-xs text-[4px] text-white tracking-wide">
-            Nesture is a full-featured e-commerce platform built with the MERN
-            stack for speed, scalability, and security. Featuring user and admin
-            dashboards, it utilizes Redux Toolkit for state management and REST
-            APIs for smooth data flow. Key integrations include Stripe for
-            secure payments, JWT for authentication, and Bcrypt for data
-            protection. Advanced tools like React Recharts enhance data
-            visualization, while Multer ensures efficient file handling. <br />{" "}
-            <br /> Developed by Hitesh Lalwani, Nesture combines technologies
-            like React.js, Node.js, MongoDB, and Express.js to deliver a fast,
-            secure, and reliable e-commerce experience where every component
-            works like clockwork.
-          </p>
-
-          <hr className="w-full lg:my-4 my-1 mb-2" />
-
-          <div className="flex flex-wrap lg:gap-2 gap-0.5 lg:-top-2 -top-1 relative">
-            {technologies.map((tech, index) => (
-              <p
-                key={index}
-                className="lg:text-xs text-[3px] lg:px-4 lg:py-3 px-1 py-1 rounded-md lg:mx-0.5 shadow-dark lg:rounded-lg   text-white relative"
-              >
-                {tech}
-              </p>
-            ))}
-          </div>
-        </section>
-
-        <section className="grid grid-cols-3 grid-rows-[1fr,1fr] lg:gap-2 gap-1 lg:mt-14 mt-[-1px] h-full w-full  ">
-          <div className="col-span-1 row-span-1 group">
-            <div className="relative lg:rounded-r-3xl rounded-r-lg overflow-hidden h-full">
-              <img
-                src="./home.png"
-                alt="Project 1"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-90 transition-all duration-300 flex items-end justify-start p-4">
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-left">
-                  <h3 className="lg:text-base text-[3px] text-blue-500">
-                    Beautiful UI, blending Glassmorphism & Minimalism
-                  </h3>
-                  <p className="lg:text-xs text-[3px] tracking-tight lg:tracking-normal text-white">
-                    Nesture combines the elegance of glassmorphism with the
-                    simplicity of minimalism to create a visually stunning
-                    interface. The platform's glassy elements and
-                    distraction-free layout keep users engaged while driving
-                    higher conversion rates.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-span-1 row-span-1 group">
-            <div className="relative lg:rounded-3xl rounded-lg overflow-hidden h-full">
-              <img
-                src="./admin.png"
-                alt="Project 2"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-90 transition-all duration-300 flex items-end justify-center p-4">
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-left">
-                  <h3 className="lg:text-base text-[3px] text-blue-500">
-                    Powerful Admin Dashboard with CRUD Operations
-                  </h3>
-                  <p className="lg:text-xs text-[3px] tracking-tight lg:tracking-normal text-white">
-                    Admin dashboard offers seamless CRUD operations, powered by
-                    real-time data from backend using Recharts. Admins can
-                    easily Add/Manage Products and Users, using Axios for API
-                    requests, Multer for file handling, all backed by a secure
-                    Express-MongoDB server. Dedicated namespace architecture
-                    secures admin functionality.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-span-1 row-span-1 group">
-            <div className="relative lg:rounded-l-3xl rounded-l-lg overflow-hidden h-full">
-              <img
-                src="./user.png"
-                alt="Project 3"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-90 transition-all duration-300 flex items-end justify-center p-4">
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-left">
-                  <h3 className="lg:text-base text-[3px] text-blue-500">
-                    Customer Dashboard with Real-Time Insights
-                  </h3>
-                  <p className="lg:text-xs text-[3px] tracking-tight lg:tracking-normal text-white">
-                    The customer-facing dashboard offers a sleek, modern design,
-                    enhanced with Recharts to display user data in an intuitive
-                    way. Users can easily navigate through clean visuals while
-                    gaining valuable insights with ease.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-span-1 row-span-1 group lg:h-[213px] h-[87px] overflow-hidden">
-            <div className="relative lg:rounded-tr-3xl lg:rounded-b-none rounded-r-lg rounded-br-none rounded-b-none overflow-hidden h-full">
-              <img
-                src="./stripe.png"
-                alt="Project 4"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-90 transition-all duration-300 flex items-end justify-center p-4">
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-left">
-                  <h3 className="lg:text-base text-[3px] text-blue-500">
-                    Advanced Payment Integration with Stripe
-                  </h3>
-                  <p className="lg:text-xs text-[3px] tracking-tight lg:tracking-normal text-white">
-                    Nesture integrates Stripe, the world’s leading payment
-                    platform, to provide a seamless and secure payment
-                    experience. Whether it's credit card payments or digital
-                    wallets, the integration with Stripe guarantees hassle-free
-                    and reliable transactions, giving users peace of mind while
-                    shopping.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-span-1 row-span-1 group lg:h-[213px] h-[87px]">
-            <div className="relative lg:rounded-t-3xl rounded-lg rounded-b-none overflow-hidden h-full">
-              <img
-                src="./login.png"
-                alt="Project 5"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-90 transition-all duration-300 flex items-end justify-center p-4">
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-left">
-                  <h3 className="lg:text-base text-[3px] text-blue-500">
-                    Secure User Authentication with JWT and Bcrypt
-                  </h3>
-                  <p className="lg:text-xs text-[3px] tracking-tight lg:tracking-normal text-white">
-                    The platform makes use of a multi-step form for smooth user
-                    authentication, securely attaching JWT from the backend.
-                    Passwords are hashed using Bcrypt and protected with SHA-256
-                    (Secure Hash Algorithm 256-bit) encryption, ensuring
-                    sensitive data is stored safely.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-span-1 row-span-1 group lg:h-[213px] h-[87px]">
-            <div className="relative lg:rounded-l-3xl lg:rounded-b-none rounded-l-lg rounded-b-none rounded-bl-none overflow-hidden h-full">
-              <img
-                src="./singlepage.png"
-                alt="Project 6"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-90 transition-all duration-300 flex items-end justify-center p-4">
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-left">
-                  <h3 className="lg:text-base text-[3px] text-blue-500">
-                    Scalable State Management with Redux Toolkit
-                  </h3>
-                  <p className="lg:text-xs text-[3px] tracking-tight lg:tracking-normal text-white">
-                    Nesture uses Redux Toolkit for unified state management
-                    across the entire e-commerce platform, handling cart,
-                    product, and user states in a single, centralized store.
-                    This approach guarantees smooth handling of increased data
-                    and user traffic as the platform grows.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-      <section className="flex flex-col bg-dark_primary lg:mt-10 mt-2 w-full h-[220px] lg:h-[770px] lg:rounded-3xl rounded-md lg:mb-8 mb-2 lg:p-4 p-2">
-        <div className="grid grid-cols-[2.5fr_2.5fr_1fr_1fr] grid-rows-[2.5fr_2.5fr_1fr_1fr] h-full w-full lg:gap-2 gap-1">
-          <div className="col-span-2 row-span-3 group h-full">
-            <div className="relative lg:rounded-3xl rounded-md overflow-hidden h-full">
-              <img
-                src="./megamenu.png"
-                alt="Project 4"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-90 transition-all duration-300 flex items-end justify-center p-4">
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-left">
-                  <h3 className="lg:text-base text-[3px] text-blue-500">
-                    Streamlined Design with Tailwind CSS
-                  </h3>
-                  <p className="lg:text-xs text-[3px] tracking-tight lg:tracking-normal text-white">
-                    Nesture uses Tailwind CSS to create stunning layouts from
-                    scratch with speed and precision. Its utility-first
-                    framework allows for rapid styling, ensuring a polished,
-                    modern look across the platform. With Tailwind, I can easily
-                    translate ideas into beautiful, pixel-perfect designs with
-                    minimal effort. Whether it’s adjusting spacing, picking the
-                    right color palette, choosing typography, or managing
-                    layout, every tool I need is right at my fingertips. This
-                    simplifies the development process, enabling me to deliver
-                    clean, consistent designs faster than ever.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-span-2 row-span-4 group h-full lg:ml-0 ml-2">
-            <div className="relative lg:rounded-3xl rounded-lg overflow-hidden h-full">
-              <img
-                src="./phone.png"
-                alt="Project 4"
-                className="w-full h-full lg:object-contain"
-              />
-              <div className="absolute lg:inset-5 inset-0 lg:-my-5  bg-black bg-opacity-0 group-hover:bg-opacity-90 transition-all duration-300 flex items-end justify-center p-4 rounded-3xl">
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-left">
-                  <h3 className="lg:text-base text-[3px] text-blue-500">
-                    Responsive design that looks best everywhere.
-                  </h3>
-                  <p className="lg:text-xs text-[3px] tracking-tight lg:tracking-normal text-white">
-                    Nesture ensures a flawless user experience across all
-                    devices, adapting seamlessly to different screen sizes. With
-                    a fully responsive design, the platform maintains its
-                    consistency and aesthetics, providing a smooth and engaging
-                    experience, whether on mobile, tablet, or desktop.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-span-1 row-span-1 group h-full">
-            <div className="relative lg:rounded-3xl rounded-md h-full bg-slate-900 lg:p-8 p-1.5">
-              <h3 className="text-white font-Poppins lg:mb-5  lg:text-5xl text-xs">
-                Problem
-              </h3>
-              <p className="text-white font-Poppins text-[3px] tracking-tighter lg:tracking-normal lg:text-xs">
-                In a crowded job market, many developers showcase generic
-                e-commerce projects on their resumes, often focusing on basic
-                CRUD functionalities or simple templates. These projects lack
-                the complexity and advanced features that demonstrate real-world
-                expertise, making it hard to stand out to potential employers or
-                clients. This results in a generic portfolio that doesn't
-                highlight the full range of a developer's skills.
-              </p>
-            </div>
-          </div>
-
-          <div className="col-span-1 row-span-1 group h-full">
-            <div className="relative lg:rounded-3xl rounded-md h-full bg-blue-400 lg:p-8 p-1.5">
-              <h3 className="text-white font-Poppins lg:mb-5  lg:text-5xl text-xs">
-                Solution
-              </h3>
-              <p className="text-white font-Poppins text-[3px] tracking-tighter lg:tracking-normal lg:text-xs">
-                To set myself apart in this competitive market, I developed
-                Nesture, a full-featured e-commerce platform built with the MERN
-                stack. By incorporating advanced functionalities such as JWT
-                authentication, Stripe payment integration, Redux state
-                management, and a fully responsive design, I created a project
-                that not only showcases my technical skills but also
-                demonstrates my ability to tackle real-world challenges. This
-                project highlights my expertise in building scalable, secure,
-                and high-performance applications, ensuring I stand out as a
-                developer ready for complex, production-level projects.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Nesture />
+      {projectsData.map((project, index) => (
+        <ProjectCard key={index} {...project} />
+      ))}
     </>
   );
 };

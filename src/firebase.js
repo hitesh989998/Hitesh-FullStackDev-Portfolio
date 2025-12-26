@@ -1,19 +1,20 @@
-// Import the functions you need from the SDKs
+// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getDatabase } from "firebase/database";
 
-// Firebase configuration
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_API_KEY,
-  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  apiKey: "AIzaSyAI9qfHCrHLJ4bIjFm-IY_y4QmeoA9HvEI",
+  authDomain: "hiteshfullstackdev.firebaseapp.com",
   databaseURL:
     "https://hiteshfullstackdev-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: import.meta.env.VITE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_APP_ID,
-  measurementId: import.meta.env.VITE_MEASUREMENT_ID,
+  projectId: "hiteshfullstackdev",
+  storageBucket: "hiteshfullstackdev.firebasestorage.app",
+  messagingSenderId: "307693935583",
+  appId: "1:307693935583:web:1508c70bc2438a4661026a",
+  measurementId: "G-B9R9ZS8N74",
 };
 
 // Initialize Firebase

@@ -140,3 +140,91 @@
       -1px -1px 2px rgba(255, 255, 255, 0.6); /* Lighter highlight */
   }
 }
+
+
+/* Neumorphic shadows for accent colors */
+@media (min-width: 1025px) {
+  .shadow-dark-blue {
+    border-radius: 18px;
+    background: #0a2540;
+    box-shadow: 5px 5px 0px #082038, -5px -5px 0px #0c2a48;
+  }
+  .shadow-dark-green {
+    border-radius: 18px;
+    background: #0a2922;
+    box-shadow: 5px 5px 0px #08241d, -5px -5px 0px #0c2e27;
+  }
+  .shadow-dark-purple {
+    border-radius: 18px;
+    background: #1a1033;
+    box-shadow: 5px 5px 0px #160d2c, -5px -5px 0px #1e133a;
+  }
+  .shadow-dark-orange {
+    border-radius: 18px;
+    background: #1E0200;
+    box-shadow: 5px 5px 0px #190200, -5px -5px 0px #230300;
+  }
+  .shadow-dark-cyan {
+    border-radius: 18px;
+    background: #0a2933;
+    box-shadow: 5px 5px 0px #08242c, -5px -5px 0px #0c2e3a;
+  }
+}
+
+@media (max-width: 1024px) {
+  .shadow-dark-blue {
+    border-radius: 5px;
+    background: #0a2540;
+    box-shadow: 1px 1px 1px #082038, -1px -1px 1px #0c2a48;
+  }
+  .shadow-dark-green {
+    border-radius: 5px;
+    background: #0a2922;
+    box-shadow: 1px 1px 1px #08241d, -1px -1px 1px #0c2e27;
+  }
+  .shadow-dark-purple {
+    border-radius: 5px;
+    background: #1a1033;
+    box-shadow: 1px 1px 1px #160d2c, -1px -1px 1px #1e133a;
+  }
+  .shadow-dark-orange {
+    border-radius: 5px;
+    background: #1E0200;
+    box-shadow: 1px 1px 1px #190200, -1px -1px 1px #230300;
+  }
+  .shadow-dark-cyan {
+    border-radius: 5px;
+    background: #0a2933;
+    box-shadow: 1px 1px 1px #08242c, -1px -1px 1px #0c2e3a;
+  }
+}
+
+
+/* LightGallery custom styles */
+.lg-sub-html {
+  background: rgba(0, 0, 0, 0.75) !important;
+  padding: 20px !important;
+}
+
+.lg-sub-html h4 {
+  color: #ffffff !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  margin-bottom: 8px !important;
+}
+
+.lg-sub-html p {
+  color: #e0e0e0 !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+}
+
+/* LightGallery counter/page numbers */
+.lg-counter {
+  color: #ffffff !important;
+}
+
+.lg-counter-current,
+.lg-counter-all {
+  color: #ffffff !important;
+}
