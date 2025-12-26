@@ -14,8 +14,8 @@ const Hero = () => {
         <section className="flex flex-col lg:flex-row relative top-[128%] right-[35%] lg:top-10 lg:right-12 lg:w-8/12 bg-white">
           <div className="lg:pb-16 lg:pt-10">
             <h2 className="relative w-full">
-              <p className="text-neutral-300 font-Pinyon tracking-widest lg:text-4xl text-sm lg:ml-3 ml-1 -mb-1 lg:mb-1">
-                highly skilled
+              <p className="text-neutral-300 font-Pinyon  lg:text-4xl text-sm lg:ml-3 ml-1 -mb-1 lg:mb-1">
+                Calmly Experienced
               </p>
               <div className="flex items-center justify-center whitespace-nowrap">
                 <p className="text-neutral-300 lg:text-7xl text-xl font-light">
@@ -27,9 +27,9 @@ const Hero = () => {
                 </p>
               </div>
               <img
-                src="/mern.jpeg"
+                src="/techstack.png"
                 alt="mern"
-                className="lg:w-60 w-20 absolute"
+                className="lg:w-96 w-20 mt-2 absolute"
               />
             </h2>
 
