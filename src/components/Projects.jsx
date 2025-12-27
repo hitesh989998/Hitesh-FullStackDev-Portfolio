@@ -1,4 +1,4 @@
-import { SiFirebase, SiCoronarenderer, SiVercel } from "react-icons/si";
+import { SiVercel } from "react-icons/si";
 import ProjectCard from "./ProjectCard";
 import Nesture from "./Nesture";
 
