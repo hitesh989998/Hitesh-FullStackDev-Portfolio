@@ -26,23 +26,23 @@
     @apply text-dark_primary;
   }
   h1 {
-    @apply font-Poppins lg:text-6xl text-3xl font-extrabold;
+    @apply font-Poppins text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-extrabold;
   }
   h2 {
-    @apply font-Inria text-5xl font-bold;
+    @apply font-Inria text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold;
   }
   h3 {
-    @apply font-Paprika text-5xl;
+    @apply font-Paprika text-xl sm:text-2xl md:text-3xl lg:text-5xl;
   }
   h4 {
-    @apply md:text-4xl text-3xl !leading-relaxed font-Paprika;
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl !leading-relaxed font-Paprika;
   }
   h6 {
-    @apply font-Paprika font-bold text-[#253D57] leading-8;
+    @apply font-Paprika font-bold text-[#253D57] leading-7 sm:leading-8;
   }
 
   p {
-    @apply font-Poppins text-[0.95rem];
+    @apply font-Poppins text-sm sm:text-base lg:text-[0.95rem];
   }
   button {
     @apply font-Poppins;
@@ -55,14 +55,14 @@
 
 @layer utilities {
   .btn {
-    @apply py-2 px-9 border-2 rounded-md
-     border-dark_primary rounded-br-3xl font-medium;
+    @apply py-2 px-6 sm:px-9 border-2 rounded-md
+     border-dark_primary rounded-br-3xl font-medium text-sm sm:text-base;
   }
   .title {
-    @apply md:text-3xl text-2xl;
+    @apply text-xl sm:text-2xl md:text-3xl;
   }
   .subtitle {
-    @apply text-gray;
+    @apply text-gray text-sm sm:text-base;
   }
 }
 .swiper-pagination-bullet {
@@ -77,7 +77,7 @@
 @media (max-width: 1024px) {
   .shadow-neumorph-soft {
     background: #dbeafe;
-    box-shadow: 2px 2px 4.5px #c0d3e8, -2px -2px 4.5px #eef9ff; /* Slightly sharper for mobile */
+    box-shadow: 3px 3px 6px #c0d3e8, -3px -3px 6px #eef9ff;
   }
 }
 
@@ -227,4 +227,29 @@
 .lg-counter-current,
 .lg-counter-all {
   color: #ffffff !important;
+}
+
+/* Hide scrollbar for horizontal scroll containers */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Smooth scroll snap for mobile carousels */
+@media (max-width: 1024px) {
+  .snap-x {
+    scroll-snap-type: x mandatory;
+  }
+  
+  .snap-start {
+    scroll-snap-align: start;
+  }
+  
+  .snap-mandatory {
+    scroll-snap-type: x mandatory;
+  }
 }
