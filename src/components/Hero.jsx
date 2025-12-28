@@ -22,11 +22,11 @@ const Hero = () => {
             <p className="text-neutral-400 font-Pinyon text-base sm:text-lg md:text-xl mb-2">
               Frontend. Backend. Systems.
             </p>
-            
-            <div className="flex items-center justify-center gap-1 mb-3">
-              <span className="text-neutral-300 text-xl sm:text-2xl md:text-3xl font-light">{"{"}</span>
-              <span className="text-lg sm:text-xl md:text-2xl font-bold text-dark_primary font-Poppins">Full Stack Developer</span>
-              <span className="text-neutral-300 text-xl sm:text-2xl md:text-3xl font-light">{"}"}</span>
+
+            <div className="flex items-baseline justify-center gap-1 mb-3">
+              <span className="text-neutral-300 text-3xl sm:text-5xl  font-light">{"{"}</span>
+              <span className="text-2xl sm:text-4xl  font-bold text-dark_primary font-Poppins">Full Stack Developer</span>
+              <span className="text-neutral-300 text-3xl sm:text-5xl font-light">{"}"}</span>
             </div>
 
             <p className="text-xl sm:text-2xl md:text-3xl font-bold text-dark_primary mb-4 font-Poppins">
@@ -49,14 +49,14 @@ const Hero = () => {
       </div>
 
       {/* Desktop Layout - Shows at 1024px+ */}
-      <div className="hidden lg:flex lg:h-[770px] relative flex-row items-end justify-center bg-white rounded-3xl">
+      <div className="hidden lg:flex lg:h-[770px] relative flex-row items-center justify-center bg-white rounded-3xl">
         <div className="absolute h-full w-4/12 top-0 -right-1 bg-[url('/darkblue.png')] bg-[length:100%_100%] bottom-0 z-10 overflow-hidden rounded-r-3xl">
-          <h1 className="rotate-90 absolute top-[38%] right-[-45%] text-[#EAF2FA] text-6xl whitespace-nowrap">
+          <h1 className="rotate-90 absolute top-1/2 right-0 translate-x-[40%] -translate-y-1/2 text-[#EAF2FA] text-6xl whitespace-nowrap">
             HITESH <span className="text-[#EAF2FA]">LALWANI</span>
           </h1>
         </div>
 
-        <section className="flex flex-row relative top-10 right-12 w-8/12 bg-white">
+        <section className="flex flex-row items-center justify-center w-full bg-white">
           <div className="pb-16 pt-10">
             <h2 className="relative w-full">
               <p className="text-neutral-300 font-Pinyon text-4xl ml-3 mb-1">
@@ -64,7 +64,7 @@ const Hero = () => {
               </p>
               <div className="flex items-center justify-center whitespace-nowrap">
                 <p className="text-neutral-300 text-7xl font-light">{"{"}</p>
-                <h2 className="text-7xl">Full Stack Developer</h2>
+                <h2 className="lg:text-6xl xl:text-7xl">Full Stack Developer</h2>
                 <p className="text-neutral-300 text-7xl font-light">{"}"}</p>
               </div>
               <img src="/techstack.png" alt="mern" className="w-96 mt-2 absolute" />
@@ -79,8 +79,8 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="h-[37rem] z-50 w-full left-20 relative">
-            <img src="/me.jpg" alt="Hitesh" className="rounded-3xl h-auto w-auto object-cover" />
+          <div className="z-50 flex-shrink-0 lg:ml-1 xl:ml-10">
+            <img src="/me.jpg" alt="Hitesh" className="rounded-3xl lg:h-[15rem] lg:w-[15rem] xl:h-[18rem] xl:w-[18rem] object-cover" />
           </div>
         </section>
       </div>
