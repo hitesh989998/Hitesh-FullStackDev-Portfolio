@@ -95,7 +95,7 @@ const SkillsSection = () => {
         <section className="flex flex-col gap-1 w-1/2 h-full p-2">
           <div className="flex-1 bg-[#000336] rounded-3xl font-semibold relative">
             <div className="absolute inset-10 flex items-center justify-center">
-              <div className="aspect-square w-[90%] bg-no-repeat bg-cover bg-center rounded-full bg-[url('/tree-1.png')]"></div>
+              <div className="aspect-square w-[90%] 2xl:w-[60%] bg-no-repeat bg-cover bg-center rounded-full bg-[url('/tree-1.png')]"></div>
             </div>
             <h3 className="absolute left-5 top-5 text-white text-2xl tracking-wide p-3 font-Poppins">
               Great web development isn't
@@ -123,21 +123,21 @@ const SkillsSection = () => {
               </h3>
             </section>
             <div className="bg-blue-100 rounded-3xl p-6 w-full">
-              <div className="flex flex-wrap gap-4 w-full h-[620px]">
+              <div className="flex flex-wrap lg:gap-3 2xl:gap-4  w-full h-[620px]">
                 {[
                   "React.js", "Node.js", "MongoDB", "Express.js", "Tailwind CSS",
                   "Redux Toolkit State Management", "Version Control (GitHub)",
-                  "Code Linting(ESLint) & Formatting(Prettier)", "Wordpress Development",
-                  "SEO Optimization & Digital Marketing", "MVC Architecture",
-                  "CI/CD Development", "RESTful API Development",
+                  "Code Linting(ESLint) & Formatting(Prettier)", "Typescript",
+                  "SEO Optimization", "Next.js","Prisma",
+                  "CI/CD Development", "Kafka",
                   "JWT Authentication & Security", "Responsive Web Design",
                   "Agile Development", "Firebase Hosting & Real-Time Database",
-                  "Performance Optimization", "Problem Solving & Debugging",
-                  "Scalable Web Architecture", "Code Refactoring & Maintenance",
+                  "Performance Optimization", "tRPC", 'Turborepo',
+                  "Scalable Web Architecture", "System Design",
                 ].map((capability, index) => (
                   <p
                     key={index}
-                    className="bg-[#7C93C3] shadow-neumorph-soft text-dark_primary px-4 py-2.5 rounded-2xl flex items-center justify-center text-base font-medium whitespace-nowrap"
+                    className="bg-[#7C93C3] shadow-neumorph-soft text-dark_primary px-4 py-2.5 rounded-2xl flex items-center justify-center text-xs xl:text-base font-medium whitespace-nowrap"
                   >
                     {capability}
                   </p>
